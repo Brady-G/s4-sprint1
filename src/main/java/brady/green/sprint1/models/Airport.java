@@ -1,36 +1,11 @@
 package brady.green.sprint1.models;
 
-public class Airport {
+public record Airport(int id, String code, int city, String name) {
 
-    private final int id;
-    private final String code;
-    private final int city;
-    private String name;
-
-    public Airport(int id, String code, int city, String name) {
-        this.id = id;
-        this.code = code;
-        this.city = city;
-        this.name = name;
+    public Airport(int id, Body body) {
+        this(id, body.code(), body.city(), body.name());
     }
 
-    public int id() {
-        return id;
-    }
-
-    public String code() {
-        return code;
-    }
-
-    public int city() {
-        return city;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
+    public record Body(String code, int city, String name) {
     }
 }
