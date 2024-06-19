@@ -1,0 +1,125 @@
+POST http://localhost:8080/passengers
+Content-Type: application/json
+
+{ "firstName": "John", "lastName": "Doe", "phoneNumber": "123-456-7890" }
+
+### Passenger 2
+POST http://localhost:8080/passengers
+Content-Type: application/json
+
+{ "firstName": "Jane", "lastName": "Doe", "phoneNumber": "123-456-7890" }
+
+### Passenger 3
+POST http://localhost:8080/passengers
+Content-Type: application/json
+
+{ "firstName": "Jim", "lastName": "Doe", "phoneNumber": "123-456-7890" }
+
+### Passenger 4
+POST http://localhost:8080/passengers
+Content-Type: application/json
+
+{ "firstName": "Jill", "lastName": "Doe", "phoneNumber": "123-456-7890" }
+
+
+### City 1
+POST http://localhost:8080/cities
+Content-Type: application/json
+
+{ "name": "New York", "state": "NY", "population": 1000000 }
+
+### City 2
+POST http://localhost:8080/cities
+Content-Type: application/json
+
+{ "name": "Los Angeles", "state": "CA", "population": 500000 }
+
+### City 3
+POST http://localhost:8080/cities
+Content-Type: application/json
+
+{ "name": "Chicago", "state": "IL", "population": 300000 }
+
+### City 4
+POST http://localhost:8080/cities
+Content-Type: application/json
+
+{ "name": "Houston", "state": "TX", "population": 200000 }
+
+### Airport 1
+POST http://localhost:8080/airports
+Content-Type: application/json
+
+{ "code": "JFK", "city": 1, "name": "John F. Kennedy International Airport" }
+
+### Airport 2
+POST http://localhost:8080/airports
+Content-Type: application/json
+
+{ "code": "LAX", "city": 2, "name": "Los Angeles International Airport" }
+
+### Airport 3
+POST http://localhost:8080/airports
+Content-Type: application/json
+
+{ "code": "ORD", "city": 3, "name": "O'Hare International Airport" }
+
+### Airport 4
+POST http://localhost:8080/airports
+Content-Type: application/json
+
+{ "code": "IAH", "city": 4, "name": "George Bush Intercontinental Airport" }
+
+### AirCraft 1
+POST http://localhost:8080/aircrafts
+Content-Type: application/json
+
+{ "type": "Boeing 737", "airline": "American Airlines", "capacity": 100 }
+
+### AirCraft 2
+POST http://localhost:8080/aircrafts
+Content-Type: application/json
+
+{ "type": "Boeing 747", "airline": "Delta Airlines", "capacity": 200 }
+
+### Route 1 (NY to LA)
+POST http://localhost:8080/routes
+Content-Type: application/json
+
+{ "airCraft": 1, "origin": 1, "destination": 2 }
+
+### Route 2 (LA to Chicago)
+POST http://localhost:8080/routes
+Content-Type: application/json
+
+{ "airCraft": 2, "origin": 2, "destination": 3 }
+
+### Route 2 (LA to Chicago)
+POST http://localhost:8080/routes
+Content-Type: application/json
+
+{ "airCraft": 1, "origin": 2, "destination": 3 }
+
+### Flight for John Doe
+POST http://localhost:8080/flights
+Content-Type: application/json
+
+{ "passenger": 1, "route": 1 }
+
+### Flight for Jane Doe
+POST http://localhost:8080/flights
+Content-Type: application/json
+
+{ "passenger": 2, "route": 1 }
+
+### Flight for Jim Doe
+POST http://localhost:8080/flights
+Content-Type: application/json
+
+{ "passenger": 3, "route": 2 }
+
+### Flight for Jill Doe
+POST http://localhost:8080/flights
+Content-Type: application/json
+
+{ "passenger": 4, "route": 2 }

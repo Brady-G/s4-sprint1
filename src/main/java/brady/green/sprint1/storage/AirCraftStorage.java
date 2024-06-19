@@ -40,12 +40,12 @@ public class AirCraftStorage {
     // Flights
 
     public static boolean addFlight(Flight flight) {
-        return FLIGHTS.computeIfAbsent(flight.aircraft(), k -> new HashSet<>())
+        return FLIGHTS.computeIfAbsent(flight.route(), k -> new HashSet<>())
                 .add(flight);
     }
 
     public static boolean removeFlight(Flight flight) {
-        var flights = FLIGHTS.get(flight.aircraft());
+        var flights = FLIGHTS.get(flight.route());
         if (flights == null) return false;
         return flights.remove(flight);
     }

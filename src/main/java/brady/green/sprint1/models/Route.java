@@ -3,18 +3,18 @@ package brady.green.sprint1.models;
 public record Route(
     int id,
     int airCraft,
-    int startingAirport,
-    int endingAirport
+    int origin,
+    int destination
 ) {
 
     public Route(int id, Body body) {
-        this(id, body.airCraft(), body.startingAirport(), body.endingAirport());
+        this(id, body.airCraft(), body.origin(), body.destination());
     }
 
     public record Body(
         int airCraft,
-        int startingAirport,
-        int endingAirport
+        int origin,
+        int destination
     ) {
     }
 }
